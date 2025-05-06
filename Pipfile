@@ -1,0 +1,219 @@
+Last login: Tue Apr 29 21:25:10 on ttys000
+heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pipenv
+Usage: pipenv [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --where                         Output project home information.
+  --venv                          Output virtualenv information.
+  --py                            Output Python interpreter information.
+  --envs                          Output Environment Variable options.
+  --rm                            Remove the virtualenv.
+  --bare                          Minimal output.
+  --man                           Display manpage.
+  --support                       Output diagnostic information for use in
+                                  GitHub issues.
+  --site-packages / --no-site-packages
+                                  Enable site-packages for the virtualenv.
+                                  
+  --python TEXT                   Specify which version of Python virtualenv
+                                  should use.
+  --clear                         Clears caches (pipenv, pip).  
+  -q, --quiet                     Quiet mode.
+  -v, --verbose                   Verbose mode.
+  --pypi-mirror TEXT              Specify a PyPI mirror.
+  --version                       Show the version and exit.
+  -h, --help                      Show this message and exit.
+
+
+Usage Examples:
+   Create a new project using Python 3.7, specifically:
+   $ pipenv --python 3.7
+
+   Remove project virtualenv (inferred from current directory):
+   $ pipenv --rm
+
+   Install all dependencies for a project (including dev):
+   $ pipenv install --dev
+
+   Create a lockfile containing pre-releases:
+   $ pipenv lock --pre
+
+   Show a graph of your installed dependencies:
+   $ pipenv graph
+
+   Check your installed dependencies for security vulnerabilities:
+   $ pipenv check
+
+   Install a local setup.py into your virtual environment/Pipfile:
+   $ pipenv install -e .
+
+   Use a lower-level pip command:
+   $ pipenv run pip freeze
+
+Commands:
+  check         Checks for PyUp Safety security vulnerabilities and against
+                PEP 508 markers provided in Pipfile.
+  clean         Uninstalls all packages not specified in Pipfile.lock.
+  graph         Displays currently-installed dependency graph information.
+  install       Installs provided packages and adds them to Pipfile, or (if no
+                packages are given), installs all packages from Pipfile.
+  lock          Generates Pipfile.lock.
+  open          View a given module in your editor.
+  requirements  Generate a requirements.txt from Pipfile.lock.
+  run           Spawns a command installed into the virtualenv.
+  scripts       Lists scripts in current environment config.
+  shell         Spawns a shell within the virtualenv.
+  sync          Installs all packages specified in Pipfile.lock.
+  uninstall     Uninstalls a provided package and removes it from Pipfile.
+  update        Runs lock, then sync.
+  upgrade       Resolves provided packages and adds them to Pipfile, or (if no
+                packages are given), merges results to Pipfile.lock
+  verify        Verify the hash in Pipfile.lock is up-to-date.
+heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pipenv shell    
+Launching subshell in virtual environment...
+ source /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/bin/activate
+heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer %  source /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/bin/activate
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pip install numpy
+Requirement already satisfied: numpy in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (2.2.5)
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pip install st-notion-connection  
+Collecting st-notion-connection
+  Downloading st_notion_connection-0.0.1-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: streamlit>=1.28.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from st-notion-connection) (1.44.1)
+Requirement already satisfied: altair<6,>=4.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (5.5.0)
+Requirement already satisfied: blinker<2,>=1.0.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (1.9.0)
+Requirement already satisfied: cachetools<6,>=4.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (5.5.2)
+Requirement already satisfied: click<9,>=7.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (8.1.8)
+Requirement already satisfied: numpy<3,>=1.23 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (2.2.5)
+Requirement already satisfied: packaging<25,>=20 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (24.2)
+Requirement already satisfied: pandas<3,>=1.4.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (2.2.3)
+Requirement already satisfied: pillow<12,>=7.1.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (11.2.1)
+Requirement already satisfied: protobuf<6,>=3.20 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (5.29.4)
+Requirement already satisfied: pyarrow>=7.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (20.0.0)
+Requirement already satisfied: requests<3,>=2.27 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (2.32.3)
+Requirement already satisfied: tenacity<10,>=8.1.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (9.1.2)
+Requirement already satisfied: toml<2,>=0.10.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (0.10.2)
+Requirement already satisfied: typing-extensions<5,>=4.4.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (4.13.2)
+Requirement already satisfied: gitpython!=3.1.19,<4,>=3.0.7 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (3.1.44)
+Requirement already satisfied: pydeck<1,>=0.8.0b4 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (0.9.1)
+Requirement already satisfied: tornado<7,>=6.0.3 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from streamlit>=1.28.0->st-notion-connection) (6.4.2)
+Requirement already satisfied: jinja2 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (3.1.6)
+Requirement already satisfied: jsonschema>=3.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (4.23.0)
+Requirement already satisfied: narwhals>=1.14.2 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (1.37.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.28.0->st-notion-connection) (4.0.12)
+Requirement already satisfied: python-dateutil>=2.8.2 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from pandas<3,>=1.4.0->streamlit>=1.28.0->st-notion-connection) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from pandas<3,>=1.4.0->streamlit>=1.28.0->st-notion-connection) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from pandas<3,>=1.4.0->streamlit>=1.28.0->st-notion-connection) (2025.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests<3,>=2.27->streamlit>=1.28.0->st-notion-connection) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests<3,>=2.27->streamlit>=1.28.0->st-notion-connection) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests<3,>=2.27->streamlit>=1.28.0->st-notion-connection) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests<3,>=2.27->streamlit>=1.28.0->st-notion-connection) (2025.4.26)
+Requirement already satisfied: smmap<6,>=3.0.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.28.0->st-notion-connection) (5.0.2)
+Requirement already satisfied: MarkupSafe>=2.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from jinja2->altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (3.0.2)
+Requirement already satisfied: attrs>=22.2.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (25.3.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (2025.4.1)
+Requirement already satisfied: referencing>=0.28.4 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (0.36.2)
+Requirement already satisfied: rpds-py>=0.7.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit>=1.28.0->st-notion-connection) (0.24.0)
+Requirement already satisfied: six>=1.5 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas<3,>=1.4.0->streamlit>=1.28.0->st-notion-connection) (1.17.0)
+Downloading st_notion_connection-0.0.1-py3-none-any.whl (4.2 kB)
+Installing collected packages: st-notion-connection
+Successfully installed st-notion-connection-0.0.1
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pip install notion
+Collecting notion
+  Downloading notion-0.0.28-py3-none-any.whl.metadata (14 kB)
+Collecting bs4 (from notion)
+  Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting cached-property (from notion)
+  Downloading cached_property-2.0.1-py3-none-any.whl.metadata (10 kB)
+Collecting commonmark (from notion)
+  Downloading commonmark-0.9.1-py2.py3-none-any.whl.metadata (5.7 kB)
+Collecting dictdiffer (from notion)
+  Downloading dictdiffer-0.9.0-py2.py3-none-any.whl.metadata (4.8 kB)
+Collecting python-slugify (from notion)
+  Downloading python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+Requirement already satisfied: requests in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from notion) (2.32.3)
+Collecting tzlocal (from notion)
+  Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting beautifulsoup4 (from bs4->notion)
+  Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+Collecting text-unidecode>=1.3 (from python-slugify->notion)
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests->notion) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests->notion) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests->notion) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from requests->notion) (2025.4.26)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->notion)
+  Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: typing-extensions>=4.0.0 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from beautifulsoup4->bs4->notion) (4.13.2)
+Downloading notion-0.0.28-py3-none-any.whl (43 kB)
+Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Downloading cached_property-2.0.1-py3-none-any.whl (7.4 kB)
+Downloading commonmark-0.9.1-py2.py3-none-any.whl (51 kB)
+Downloading dictdiffer-0.9.0-py2.py3-none-any.whl (16 kB)
+Downloading python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+Installing collected packages: text-unidecode, dictdiffer, commonmark, tzlocal, soupsieve, python-slugify, cached-property, beautifulsoup4, bs4, notion
+Successfully installed beautifulsoup4-4.13.4 bs4-0.0.2 cached-property-2.0.1 commonmark-0.9.1 dictdiffer-0.9.0 notion-0.0.28 python-slugify-8.0.4 soupsieve-2.7 text-unidecode-1.3 tzlocal-5.3.1
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pip install notion --user
+ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pip install notion --user
+ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % pip install notion-client
+Collecting notion-client
+  Downloading notion_client-2.3.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting httpx>=0.23.0 (from notion-client)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting anyio (from httpx>=0.23.0->notion-client)
+  Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: certifi in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from httpx>=0.23.0->notion-client) (2025.4.26)
+Collecting httpcore==1.* (from httpx>=0.23.0->notion-client)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: idna in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from httpx>=0.23.0->notion-client) (3.10)
+Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.23.0->notion-client)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting sniffio>=1.1 (from anyio->httpx>=0.23.0->notion-client)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: typing_extensions>=4.5 in /Users/heeyoung/.local/share/virtualenvs/250429_WorkoutVisualizer-QV8pk210/lib/python3.12/site-packages (from anyio->httpx>=0.23.0->notion-client) (4.13.2)
+Downloading notion_client-2.3.0-py2.py3-none-any.whl (13 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Installing collected packages: sniffio, h11, httpcore, anyio, httpx, notion-client
+Successfully installed anyio-4.9.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 notion-client-2.3.0 sniffio-1.3.1
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer %  export API_KEY="ntn_E57599441475dxDyNy7EPrceaxLlKI3mng7Rsl2QktdgID"
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % mkdir .streamlit
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % ls
+Pipfile	app.py
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % mkdir .streamlit
+mkdir: .streamlit: File exists
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % cat .streamlit/secrets.toml
+cat: .streamlit/secrets.toml: No such file or directory
+(250429_WorkoutVisualizer) heeyoung@Heeyoungs-Mac-mini 250429_WorkoutVisualizer % vi .streamlit/secrets.toml
+
+[connections.notion]
+notion_api_key = "ntn_E57599441475dxDyNy7EPrceaxLlKI3mng7Rsl2QktdgID"
+url = "https://www.notion.so/Workout-Tracker-1d515751c5d38018a3e5fd9b844f9be0?pvs=4"
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --
