@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+
+# Configure Streamlit page
+st.set_page_config(
+    page_title="Workout Visualizer",
+)
 class Person:
     def __init__(self,name):
         self.name=name
@@ -75,24 +80,20 @@ test_person2.getCharts({'bridge':[[1,10],[2,15,10],[3,10,10,10]],'pullup':[[1,10
 
 
 _MY_TOKEN = "ntn_E57599441475dxDyNy7EPrceaxLlKI3mng7Rsl2QktdgID"
-_PAGE_URL = "https://www.notion.so/Workout-Tracker-1d515751c5d38018a3e5fd9b844f9be0?pvs=4"
+_PAGE_URL ="https://www.notion.so/Workout-Tracker-1d515751c5d38018a3e5fd9b844f9be0?pvs=4"
 from streamlit_notion import NotionConnection
 import os
 from notion_client import Client
 
-os.environ['NOTION_KEY']=_MY_TOKEN
-notion = Client(auth=os.environ['NOTION_KEY'])
+os.environ['NOTION_API_KEY']=_MY_TOKEN
+notion = Client(auth=os.environ['NOTION_API_KEY'])
 # Create connection
 conn = st.connection("notion", type=NotionConnection)
 
 databases = conn.list_databases()
-test_db_id=[d['database_id'] for d in databases]
+workout_archive=databases["results"][0]
+pages = conn.query(workout_archive["id"])
 
-st.write(test_db_id)
-
-# Configure Streamlit page
-st.set_page_config(
-    page_title="Workout Visualizer",
-)
-
+for p in pages:
+    st.write(p)
 
